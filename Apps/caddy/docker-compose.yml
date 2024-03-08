@@ -1,7 +1,7 @@
 name: realdebrid-client
 services:
   app:
-    image: caddy:2.7.6
+    image: rogerfar/rdtclient:latest
     restart: unless-stopped
     ports:
       - target: 6500
@@ -11,12 +11,6 @@ services:
       - type: bind
         source: /DATA/AppData/$AppID/data
         target: /data
-      - type: bind
-        source: /DATA/AppData/$AppID/config
-        target: /config
-      - type: bind
-        source: /DATA/AppData/$AppID/caddyfile
-        target: /etc/caddy/caddyfile
 x-casaos:
   architectures:
     - amd64
@@ -24,9 +18,9 @@ x-casaos:
     - arm64
   main: app
   description:
-    en_us: Caddy - The Ultimate Server with Automatic HTTPS.  Need to run tools/install_caddy.sh before installing the template.
+    en_us: Realdebrid client
   tagline:
-    en_us: Caddy - The Ultimate Server With Automatic Https.  Need To Run Tools/install_caddy.sh Before Installing The Template.
+    en_us: Realdebrid client
   developer: ''
   author: WisdomSky
   icon: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/caddy.png
