@@ -1,17 +1,11 @@
-name: caddy
+name: realdebrid-client
 services:
   app:
     image: caddy:2.7.6
     restart: unless-stopped
     ports:
-      - target: 80
-        published: 80
-        protocol: tcp
-      - target: 443
-        published: 443
-        protocol: tcp
-      - target: 2019
-        published: 2019
+      - target: 6500
+        published: 6500
         protocol: tcp
     volumes:
       - type: bind
