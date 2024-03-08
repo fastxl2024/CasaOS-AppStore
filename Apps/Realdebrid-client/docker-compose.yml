@@ -1,0 +1,61 @@
+name: Realdebrid client
+services:
+  Realdebridclient:
+    container_name: Realdebrid-client
+    deploy:
+      resources:
+        limits:
+          memory: 1024M
+    image: rogerfar/rdtclient
+    ports:
+      - target: 6500
+        published: "6500"
+        protocol: tcp
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/data/db
+        target: /data/db
+      - type: bind
+        source: /DATA/AppData/$AppID/data/downloads
+        target: /data/downloads
+    network_mode: bridge
+    privileged: false
+    x-casaos:
+      ports:
+        - container: "6500"
+          description:
+            en_us: WebUI HTTP Port
+            zh_cn: WebUI HTTP端口
+          protocol: tcp
+      volumes:
+        - container: /realdebridclient/data
+          description:
+            en_us: Realdebrid data folder
+            zh_cn: Realdebrid数据文件夹
+
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+    - arm
+  main: myspeed
+  author: rogerfar
+  category: Utilities
+  description:
+    en_us: MySpeed is a speed test analysis software that stores the speed of your internet for up to 30 days. This can also be useful if you want to know when your network might have drops or if you want to check if your internet matches the booked values from your contract.
+    pt_br: MySpeed ​​é um software de análise de teste de velocidade que armazena a velocidade da sua internet por até 30 dias. Isso também pode ser útil se você quiser saber quando sua rede pode sofrer quedas ou se quiser verificar se sua internet corresponde aos valores contratados em seu contrato.
+    zh_cn: MySpeed是一款速度测试分析软件，可以存储您的互联网速度长达30天。如果您想知道您的网络何时可能会掉线，或者想要检查您的互联网是否与合同中预订的数值相匹配，这也可能会有所帮助。
+  developer: rogerfar
+  icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/MySpeed/icon.png
+  screenshot_link:
+    - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/MySpeed/screenshot-1.png
+  tagline:
+    en_us: Download files via Realdebrid
+    pt_br: Download files via Realdebrid
+    zh_cn: 记录网速度长达30天的分析软件。
+  title:
+    en_us: Realdebrid client
+    pt_br: Realdebrid client
+  index: /
+  port_map: "6500"
