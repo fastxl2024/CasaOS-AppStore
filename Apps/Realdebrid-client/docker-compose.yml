@@ -6,7 +6,7 @@ services:
       resources:
         limits:
           memory: 1024M
-    image: rogerfar/rdtclient
+    image: rogerfar/rdtclient:latest
     ports:
       - target: 6500
         published: "6500"
