@@ -10,9 +10,7 @@ services:
     volumes:
       - type: bind
         source: /DATA/AppData/DSMR/data/backups
-        target: /app/backups       
-    links:
-      - dsmrdb        
+        target: /app/backups     
 x-casaos:
   architectures:
     - amd64
