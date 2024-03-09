@@ -1,0 +1,31 @@
+name: realdebrid-client1
+services:
+  app:
+    image: rogerfar/rdtclient:latest
+    restart: unless-stopped
+    ports:
+      - target: 6500
+        published: 6500
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/data
+        target: /data
+x-casaos:
+  architectures:
+    - amd64
+    - arm
+    - arm64
+  main: app
+  description:
+    en_us: Realdebrid client1
+  tagline:
+    en_us: Realdebrid client1
+  developer: ''
+  author: WisdomSky
+  icon: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9FFj6Vn8gbxJva7GK2J-6_SPj8vPQKs7_qnr-Ne9HVbigpT3B1ATjuFOOqOSi5CRLqcs&usqp=CAU
+  thumbnail: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/caddy.png
+  title:
+    en_us: Realdebrid client1
+  category: Fastxlstore
+  port_map: '6500'
