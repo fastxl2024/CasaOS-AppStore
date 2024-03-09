@@ -18,9 +18,9 @@ x-casaos:
     - arm64
   main: app
   description:
-    en_us: Dsmr
+    en_us: Dsmr-reader
   tagline:
-    en_us: Dsmr
+    en_us: Dsmr-reader
   developer: ''
   author: WisdomSky
   icon: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9FFj6Vn8gbxJva7GK2J-6_SPj8vPQKs7_qnr-Ne9HVbigpT3B1ATjuFOOqOSi5CRLqcs&usqp=CAU
