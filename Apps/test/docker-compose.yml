@@ -1,4 +1,4 @@
-name: realdebrid-client1
+name: dsmr
 services:
   app:
     image: rogerfar/rdtclient:latest
