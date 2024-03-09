@@ -13,9 +13,7 @@ services:
     volumes:
       - type: bind
         source: /DATA/AppData/$AppID/data/backups
-        target: /app/backups       
-    cap_add:
-      - NET_ADMIN
+        target: /app/backups
     environment:
       - TZ=Europe/Amsterdam
       - DJANGO_TIME_ZONE=Europe/Amsterdam
@@ -32,7 +30,7 @@ x-casaos:
     en_us: DSMR
   developer: ''
   author: 
-  icon: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9FFj6Vn8gbxJva7GK2J-6_SPj8vPQKs7_qnr-Ne9HVbigpT3B1ATjuFOOqOSi5CRLqcs&usqp=CAU
+  icon: ''
   thumbnail: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/caddy.png
   title:
     en_us: DSMR
