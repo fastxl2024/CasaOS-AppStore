@@ -36,4 +36,3 @@ x-casaos:
   title:
     en_us: Dsmr-reader Database
   category: Fastxlstore
-  port_map: '7777'
