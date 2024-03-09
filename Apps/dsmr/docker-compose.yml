@@ -3,26 +3,24 @@ services:
   app:
     image: ghcr.io/xirixiz/dsmr-reader-docker:latest
     restart: unless-stopped
+    environment:
+      - TZ=Europe/Amsterdam
+      - DJANGO_TIME_ZONE=Europe/Amsterdam
+      - VIRTUAL_HOST=localhost    
     ports:
       - target: 7777
         published: 80
         protocol: tcp
       - target: 7779
         published: 443
-        protocol: tcp        
+        protocol: tcp       
     volumes:
       - type: bind
-        source: /DATA/AppData/$AppID/data/backups
-        target: /app/backups
-    environment:
-      - TZ=Europe/Amsterdam
-      - DJANGO_TIME_ZONE=Europe/Amsterdam
-      - VIRTUAL_HOST=localhost      
+        source: /DATA/AppData/DSMR/data/backups
+        target: /app/backups   
 x-casaos:
   architectures:
     - amd64
-    - arm
-    - arm64
   main: app
   description:
     en_us: DSMR
