@@ -1,4 +1,4 @@
-name: DSMR
+name: Dsmr
 services:
   app:
     image: ghcr.io/xirixiz/dsmr-reader-docker:latest
@@ -19,14 +19,14 @@ x-casaos:
     - amd64
   main: app
   description:
-    en_us: DSMR
+    en_us: DSMR For p1 reader
   tagline:
-    en_us: DSMR
+    en_us: Dsmr
   developer: ''
-  author: 
+  author: ''
   icon: ''
   thumbnail: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/caddy.png
   title:
-    en_us: DSMR
+    en_us: Dsmr
   category: Fastxlstore
   port_map: '7777'
