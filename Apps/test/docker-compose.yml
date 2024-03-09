@@ -18,9 +18,9 @@ x-casaos:
     - arm64
   main: app
   description:
-    en_us: Realdebrid client1
+    en_us: Realdebrid client-
   tagline:
-    en_us: Realdebrid client1
+    en_us: Realdebrid client-
   developer: ''
   author: WisdomSky
   icon: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9FFj6Vn8gbxJva7GK2J-6_SPj8vPQKs7_qnr-Ne9HVbigpT3B1ATjuFOOqOSi5CRLqcs&usqp=CAU
