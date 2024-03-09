@@ -2,11 +2,7 @@ name: DSMR
 services:
   app:
     image: ghcr.io/xirixiz/dsmr-reader-docker:latest
-    restart: unless-stopped
-    environment:
-      - TZ=Europe/Amsterdam
-      - DJANGO_TIME_ZONE=Europe/Amsterdam
-      - VIRTUAL_HOST=localhost    
+    restart: unless-stopped   
     ports:
       - target: 7777
         published: 80
