@@ -1,11 +1,11 @@
-name: Dsmr
+name: dsmr-reader1
 services:
   app:
     image: ghcr.io/xirixiz/dsmr-reader-docker:latest
     restart: unless-stopped   
     ports:
-      - target: 7777
-        published: 80
+      - target: 80
+        published: 7777
         protocol: tcp   
     volumes:
       - type: bind
@@ -16,14 +16,14 @@ x-casaos:
     - amd64
   main: app
   description:
-    en_us: DSMR For p1 reader
+    en_us: DSMR-Reader For p1 reader
   tagline:
     en_us: Dsmr
   developer: ''
   author: ''
-  icon: ''
-  thumbnail: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/caddy.png
+  icon: https://avatars.githubusercontent.com/u/57727360?s=48&v=4
+  thumbnail: https://github.com/dsmrreader/dsmr-reader/blob/v5/docs/_static/screenshots/v5/frontend/dashboard.png?raw=true
   title:
-    en_us: Dsmr
+    en_us: Dsmr-reader1
   category: Fastxlstore
   port_map: '7777'
