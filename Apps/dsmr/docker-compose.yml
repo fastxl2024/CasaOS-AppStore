@@ -13,9 +13,7 @@ services:
     volumes:
       - type: bind
         source: /DATA/AppData/$AppID/data/backups
-        target: /app/backups
-    links:
-      - Dsmrdb        
+        target: /app/backups       
     cap_add:
       - NET_ADMIN
     environment:
