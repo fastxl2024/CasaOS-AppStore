@@ -1,4 +1,4 @@
-name: dsmr-reader1
+name: dsmr-reader
 services:
   app:
     image: ghcr.io/xirixiz/dsmr-reader-docker:latest
@@ -24,6 +24,6 @@ x-casaos:
   icon: https://avatars.githubusercontent.com/u/57727360?s=48&v=4
   thumbnail: https://github.com/dsmrreader/dsmr-reader/blob/v5/docs/_static/screenshots/v5/frontend/dashboard.png?raw=true
   title:
-    en_us: Dsmr-reader1
+    en_us: Dsmr-reader
   category: Fastxlstore
   port_map: '7777'
