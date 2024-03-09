@@ -26,6 +26,6 @@ x-casaos:
   icon: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9FFj6Vn8gbxJva7GK2J-6_SPj8vPQKs7_qnr-Ne9HVbigpT3B1ATjuFOOqOSi5CRLqcs&usqp=CAU
   thumbnail: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/caddy.png
   title:
-    en_us: DSMR
+    en_us: Dsmr
   category: Fastxlstore
   port_map: '6500'
