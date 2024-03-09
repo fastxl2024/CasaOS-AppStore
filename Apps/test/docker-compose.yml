@@ -1,4 +1,4 @@
-name: Dsmr-reader
+name: dsmr-reader
 services:
   app:
     image: ghcr.io/xirixiz/dsmr-reader-docker:latest
