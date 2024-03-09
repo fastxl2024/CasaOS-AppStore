@@ -6,10 +6,7 @@ services:
     ports:
       - target: 7777
         published: 80
-        protocol: tcp
-      - target: 7779
-        published: 443
-        protocol: tcp       
+        protocol: tcp   
     volumes:
       - type: bind
         source: /DATA/AppData/DSMR/data/backups
