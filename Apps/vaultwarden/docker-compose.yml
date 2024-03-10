@@ -44,6 +44,7 @@ x-casaos:
     - amd64
     - arm
     - arm64
+  main: vaultwarden
   author: CasaOS Team
   category: Utilities
   description:
