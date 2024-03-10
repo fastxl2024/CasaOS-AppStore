@@ -5,6 +5,8 @@ services:
     restart: unless-stopped
     network_mode: host
     hostname: Music-Assistant
+    environment:
+      - TZ=Europe/Amsterdam    
     volumes:
       - type: bind
         source: /DATA/AppData/Music-Assistant
