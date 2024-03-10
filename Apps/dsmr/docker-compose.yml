@@ -2,7 +2,9 @@ name: dsmr-reader
 services:
   app:
     image: ghcr.io/xirixiz/dsmr-reader-docker:latest
-    restart: unless-stopped   
+    restart: unless-stopped
+    hostname: DSMR-Reader
+    network_mode: dsmr-db_default    
     ports:
       - target: 80
         published: 7777
@@ -10,7 +12,9 @@ services:
     volumes:
       - type: bind
         source: /DATA/AppData/DSMR/data/backups
-        target: /app/backups     
+        target: /app/backups
+    links:
+      - dsmr-db          
 x-casaos:
   architectures:
     - amd64
