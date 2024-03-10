@@ -1,0 +1,29 @@
+name: music-assistant
+services:
+  app:
+    image: ghcr.io/music-assistant/server:latest
+    restart: unless-stopped
+    ports:
+      - target: 8095
+        published: 8095
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/Music-Assistant
+        target: /data
+x-casaos:
+  architectures:
+    - amd64
+  main: app
+  description:
+    en_us: Music Assistant
+  tagline:
+    en_us: Music Assistant
+  developer: ''
+  author: ''
+  icon: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9FFj6Vn8gbxJva7GK2J-6_SPj8vPQKs7_qnr-Ne9HVbigpT3B1ATjuFOOqOSi5CRLqcs&usqp=CAU
+  thumbnail: https://music-assistant.io/assets/screenshots/screen1.png
+  title:
+    en_us: Music Assistant
+  category: Fastxlstore
+  port_map: '8095'
