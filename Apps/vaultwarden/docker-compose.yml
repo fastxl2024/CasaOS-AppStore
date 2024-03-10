@@ -1,24 +1,14 @@
 name: vaultwarden
 services:
-  vaultwarden:
-    cpu_shares: 90
-    command: []
-    container_name: vaultwarden
-    deploy:
-      resources:
-        limits:
-          memory: 31753M
-        reservations:
-          memory: "268435456"
-    hostname: vaultwarden
+  app:
     image: vaultwarden/server:latest
+    restart: unless-stopped
     labels:
       icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Vaultwarden/icon.png
     ports:
       - target: 80
         published: "5151"
         protocol: tcp
-    restart: unless-stopped
     volumes:
       - type: bind
         source: /DATA/AppData/Vaultwarden/data
@@ -36,7 +26,8 @@ services:
             zh_cn: Vaultwarden 数据目录。
     devices: []
     cap_add: []
-    environment: []
+    environment:
+      - TZ=Europe/Amsterdam
     network_mode: bridge
     privileged: false
 x-casaos:
@@ -44,7 +35,7 @@ x-casaos:
     - amd64
     - arm
     - arm64
-  main: vaultwarden
+  main: app
   author: CasaOS Team
   category: Utilities
   description:
