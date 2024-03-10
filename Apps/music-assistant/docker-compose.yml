@@ -4,6 +4,7 @@ services:
     image: ghcr.io/music-assistant/server:latest
     restart: unless-stopped
     network_mode: host
+    hostname: Music-Assistant
     volumes:
       - type: bind
         source: /DATA/AppData/Music-Assistant
@@ -18,10 +19,8 @@ x-casaos:
     en_us: Music Assistant
   developer: ''
   author: ''
-  hostname: Music-Assistant
   icon: https://avatars.githubusercontent.com/u/71128003?s=200&v=4
   thumbnail: https://music-assistant.io/assets/screenshots/screen1.png
   title:
     en_us: Music Assistant
   category: Fastxlstore
-  port_map: '8095'
