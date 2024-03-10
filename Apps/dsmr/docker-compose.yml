@@ -13,8 +13,8 @@ services:
       - type: bind
         source: /DATA/AppData/DSMR/data/backups
         target: /app/backups
-    links:
-      - dsmr-db          
+#    links:
+#      - dsmr-db          
 x-casaos:
   architectures:
     - amd64
