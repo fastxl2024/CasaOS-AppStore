@@ -31,7 +31,7 @@ x-casaos:
     - arm64
   main: app
   author: CasaOS Team
-  category: Utilities
+  category: Fastxlstore
   description:
     ar_sa: تنفيذ بديل لواجهة برمجة تطبيقات Bitwarden الخادم بلغة Rust وتوافقه مع
       عملاء Bitwarden الرئيسيين ، مثالي للتشغيل المستقل حيث قد لا يكون تشغيل
