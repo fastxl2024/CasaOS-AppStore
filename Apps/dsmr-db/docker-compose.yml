@@ -12,7 +12,8 @@ services:
       - PG_TZ=Europe/Amsterdam
       - POSTGRES_USER=dsmrreader
       - POSTGRES_PASSWORD=dsmrreader
-      - POSTGRES_DB=dsmrreader           
+      - POSTGRES_DB=dsmrreader
+    hostname: DSMR-Database
 x-casaos:
   architectures:
     - amd64
