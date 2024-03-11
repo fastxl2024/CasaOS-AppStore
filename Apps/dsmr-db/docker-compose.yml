@@ -3,7 +3,7 @@ services:
   app:
     image: postgres:14-alpine
     restart: unless-stopped  
-#    network_mode: dsmr_default
+    network_mode: dsmr_default
     container_name: Dsmrdb1
     volumes:
       - type: bind
@@ -18,8 +18,8 @@ services:
     hostname: DSMR-Database
 networks:
   dsmr_default:
-    name: dsmr_default 
-    driver: bridge           
+    name: dsmr_default
+    driver: bridge       
 x-casaos:
   architectures:
     - amd64
