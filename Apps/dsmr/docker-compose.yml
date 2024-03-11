@@ -13,6 +13,10 @@ services:
       - type: bind
         source: /DATA/AppData/DSMR/data/backups
         target: /app/backups
+    environment:
+      -e DJANGO_DATABASE_HOST=10.73.27.1
+#      -e DJANGO_DATABASE_USER=dsmrreader \
+#      -e DJANGO_DATABASE_PASSWORD=dsmrreader \
 #    links:
 #      - dsmr-db          
 x-casaos:
