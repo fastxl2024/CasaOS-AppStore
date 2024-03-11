@@ -15,7 +15,7 @@ services:
         source: /DATA/AppData/DSMR/data/backups
         target: /app/backups
     environment:
-      - DJANGO_DATABASE_HOST=dsmrdb1
+      - DJANGO_DATABASE_HOST=127.0.0.1
 #      -e DJANGO_DATABASE_USER=dsmrreader \
 #      -e DJANGO_DATABASE_PASSWORD=dsmrreader \
 #    links:
