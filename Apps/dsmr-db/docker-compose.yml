@@ -15,7 +15,7 @@ services:
       - POSTGRES_USER=dsmrreader
       - POSTGRES_PASSWORD=dsmrreader
       - POSTGRES_DB=dsmrreader
-    hostname: DSMR-Database
+    hostname: dsmrdb1
      
 x-casaos:
   architectures:
