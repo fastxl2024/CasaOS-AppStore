@@ -4,7 +4,7 @@ services:
     image: ghcr.io/xirixiz/dsmr-reader-docker:latest
     restart: unless-stopped
     hostname: DSMR-Reader
-    network_mode: dsmr-db_default    
+    network_mode: dsmr_default
     ports:
       - target: 80
         published: 7777
@@ -18,7 +18,10 @@ services:
 #      -e DJANGO_DATABASE_USER=dsmrreader \
 #      -e DJANGO_DATABASE_PASSWORD=dsmrreader \
 #    links:
-#      - dsmr-db          
+#      - dsmr-db  
+networks:
+  dsmr_default:
+    name: dsmr_default        
 x-casaos:
   architectures:
     - amd64

@@ -3,7 +3,7 @@ services:
   app:
     image: postgres:14-alpine
     restart: unless-stopped  
-    network_mode: dsmr-db  
+    network_mode: dsmr_default
     volumes:
       - type: bind
         source: /DATA/AppData/DSMR/data/dsmrdb
@@ -15,6 +15,9 @@ services:
       - POSTGRES_PASSWORD=dsmrreader
       - POSTGRES_DB=dsmrreader
     hostname: DSMR-Database
+networks:
+  dsmr_default:
+    name: dsmr_default            
 x-casaos:
   architectures:
     - amd64
