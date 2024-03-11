@@ -3,7 +3,7 @@ services:
   app:
     image: postgres:14-alpine
     restart: unless-stopped  
-    network_mode: dsmr_default
+    network_mode: bridge
     container_name: dsmrdb1
     volumes:
       - type: bind
@@ -16,10 +16,6 @@ services:
       - POSTGRES_PASSWORD=dsmrreader
       - POSTGRES_DB=dsmrreader
     hostname: dsmrdb1
-networks:
-  default:
-    name: dsmr_default
-    external: true    
      
 x-casaos:
   architectures:
