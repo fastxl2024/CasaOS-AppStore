@@ -1,10 +1,10 @@
-name: dsmr-db
+name: dsmrdb1
 services:
   app:
     image: postgres:14-alpine
     restart: unless-stopped  
     network_mode: bridge
-    container_name: Dsmrdb1
+    container_name: dsmrdb1
     volumes:
       - type: bind
         source: /DATA/AppData/DSMR/data/dsmrdb
@@ -32,7 +32,7 @@ x-casaos:
   title:
     en_us: Dsmr-reader Database
   category: Fastxlstore
-  networks:
-    dsmr_default:
-      name: dsmr_default
-      driver: bridge   
+networks:
+  dsmr_default:
+    name: dsmr_default
+    driver: bridge   
