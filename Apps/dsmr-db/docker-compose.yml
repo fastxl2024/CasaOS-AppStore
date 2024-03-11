@@ -17,9 +17,8 @@ services:
       - POSTGRES_DB=dsmrreader
     hostname: dsmrdb1
 networks:
-  dsmr_default:
+  default:
     name: dsmr_default
-    driver: bridge
     external: true    
      
 x-casaos:
