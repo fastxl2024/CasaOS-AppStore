@@ -5,7 +5,7 @@ services:
     restart: unless-stopped
     hostname: DSMR-Reader
     container_name: Dsmr-reader1
-    network_mode: dsmr_default
+    network_mode: bridge
     ports:
       - target: 80
         published: 7777
