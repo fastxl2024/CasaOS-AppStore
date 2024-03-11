@@ -4,6 +4,7 @@ services:
     image: ghcr.io/xirixiz/dsmr-reader-docker:latest
     restart: unless-stopped
     hostname: DSMR-Reader
+    container_name: Dsmr-reader1
     network_mode: dsmr_default
     ports:
       - target: 80
@@ -14,14 +15,11 @@ services:
         source: /DATA/AppData/DSMR/data/backups
         target: /app/backups
     environment:
-      - DJANGO_DATABASE_HOST=10.73.27.1
+      - DJANGO_DATABASE_HOST=Dsmrdb1
 #      -e DJANGO_DATABASE_USER=dsmrreader \
 #      -e DJANGO_DATABASE_PASSWORD=dsmrreader \
 #    links:
 #      - dsmr-db  
-networks:
-  dsmr_default:
-    name: dsmr_default        
 x-casaos:
   architectures:
     - amd64
