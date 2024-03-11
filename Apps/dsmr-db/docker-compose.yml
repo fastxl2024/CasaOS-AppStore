@@ -4,6 +4,7 @@ services:
     image: postgres:14-alpine
     restart: unless-stopped  
     network_mode: dsmr_default
+    container_name: Dsmrdb1
     volumes:
       - type: bind
         source: /DATA/AppData/DSMR/data/dsmrdb
