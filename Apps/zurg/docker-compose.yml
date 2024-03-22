@@ -1,0 +1,34 @@
+name: zurg
+services:
+  app:
+    image: ghcr.io/debridmediamanager/zurg-testing:v0.9.3-hotfix.8
+    restart: unless-stopped
+    network_mode: bridge
+    hostname: Zurg
+    environment:
+      - TZ=Europe/Amsterdam    
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/config.yml
+        target: /app/config.yml
+      - type: bind
+        source: zurgdata
+        target: /app/data
+x-casaos:
+  architectures:
+    - amd64
+  main: app
+  description:
+    en_us: Zurg
+  tagline:
+    en_us: Zurg
+  developer: ''
+  author: ''
+  icon: https://avatars.githubusercontent.com/u/71128003?s=200&v=4
+  thumbnail: https://music-assistant.io/assets/screenshots/screen1.png
+  title:
+    en_us: Zurg
+  category: Fastxlstore
+
+volumes:
+  zurgdata:
