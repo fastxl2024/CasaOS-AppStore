@@ -1,4 +1,4 @@
-name: Dozzle
+name: dozzle
 services:
   app:
     image: amir20/dozzle
