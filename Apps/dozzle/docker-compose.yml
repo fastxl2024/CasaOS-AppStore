@@ -1,0 +1,34 @@
+name: Dozzle
+services:
+  app:
+    image: amir20/dozzle
+    restart: unless-stopped
+    ports:
+      - target: 8080
+        published: 10001
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/data
+        target: /data
+      - type: bind
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock
+x-casaos:
+  architectures:
+    - amd64
+    - arm
+    - arm64
+  main: app
+  description:
+    en_us: Dozzle
+  tagline:
+    en_us: Dozzle
+  developer: ''
+  author: WisdomSky
+  icon: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9FFj6Vn8gbxJva7GK2J-6_SPj8vPQKs7_qnr-Ne9HVbigpT3B1ATjuFOOqOSi5CRLqcs&usqp=CAU
+  thumbnail: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/caddy.png
+  title:
+    en_us: Dozzle
+  category: Fastxlstore
+  port_map: '10001'
